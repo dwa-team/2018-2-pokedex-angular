@@ -1,0 +1,19 @@
+<section class="bodyCont">
+    
+    <div class="leftCont imageAgumon">
+        <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
+    </div>
+    
+    <div class="rightCont">
+        <ul>
+            <li *ngFor="let caract of feature_list; let i= index">
+                <p>{{ caract }}</p>
+            </li>
+        </ul>
+        <div class="center">
+            <input type="text" [(ngModel)]="feature_a_guardar">
+            <button (click)="agregarCarac();"> + </button>
+        </div>
+    </div>
+
+</section>
