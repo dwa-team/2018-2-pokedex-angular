@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FeaturesService } from '../../services/features.services';
+import { FeaturesService } from '../../services/features.service';
 
 @Component({
   selector: 'app-pokemain',
@@ -26,6 +26,10 @@ export class PokemainComponent implements OnInit {
   agregarCarac() {
     this._featuresService.addFeature(this.feature_a_guardar);
     this.feature_a_guardar = null;
+  }
+
+  eliminarCaract(_index) {
+    this._featuresService.deleteFeature(_index);
   }
 
 }

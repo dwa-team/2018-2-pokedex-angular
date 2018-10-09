@@ -6,8 +6,9 @@
     
     <div class="rightCont">
         <ul>
-            <li *ngFor="let caract of feature_list; let i= index">
+            <li class="itemFeature" *ngFor="let caract of feature_list; let i= index">
                 <p>{{ caract }}</p>
+                <button (click)="eliminarCaract(i);"> - </button>
             </li>
         </ul>
         <div class="center">
