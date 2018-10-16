@@ -16,4 +16,28 @@ header.headerCont {
         margin: 0;
         line-height: 78px;
     }
+
+    nav {
+        float: right;
+        position: relative;
+        z-index: 12;
+        color: white;
+        margin: 29px;
+        a {
+            color: #767676;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s linear; 
+            &:hover {
+                color: #A9A9A9; 
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        a.menuActive {
+            color: #2E8ED5;
+            font-weight: bold;
+        }
+    }
 }
