@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'page-home',
@@ -10,11 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor(
-
+    private _route:Router
   ) {}
 
   ngOnInit() {
    
+  }
+
+  goToRequests() {
+    this._route.navigate(['/requests']);
   }
 
 }

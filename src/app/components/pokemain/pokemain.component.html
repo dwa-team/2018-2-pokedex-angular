@@ -4,7 +4,7 @@
         <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
     </div>
     
-    <div class="rightCont" [ngClass]="{ backBlue:isColorBlue }">
+    <div class="rightCont">
         <ul>
             <li class="itemFeature" *ngFor="let caract of feature_list; let i= index">
                 <p>{{ caract }}</p>
@@ -15,7 +15,6 @@
             <input type="text" [(ngModel)]="feature_a_guardar">
             <button (click)="agregarCarac();"> + </button>
         </div>
-        <button class="btnChangeColor" (click) = "isColorBlue = !isColorBlue;"> Change color </button> 
     </div>
 
 </section>

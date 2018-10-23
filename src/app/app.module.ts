@@ -10,7 +10,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PokemainComponent } from './components/pokemain/pokemain.component';
 import { RequestsComponent } from './pages/requests/requests.component';
+import { PipesComponent } from './pages/pipes/pipes.component';
 
+import { MultiplicarPorPipe } from './pipes/multiplicarpor.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RequestsComponent } from './pages/requests/requests.component';
     FooterComponent,
     HeaderComponent,
     PokemainComponent,
-    RequestsComponent
+    RequestsComponent,
+    PipesComponent,
+    MultiplicarPorPipe
   ],
   imports: [
     BrowserModule,
