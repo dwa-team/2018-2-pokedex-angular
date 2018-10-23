@@ -27,6 +27,7 @@
 }
 
 .rightCont {
+    position: relative;
     width: 45%;
     background: #FFFFFF;
     vertical-align: top;
@@ -45,8 +46,12 @@
         li {
             display: inline-block;
             vertical-align: top;
-            width: 35%;
-            margin: 13px;
+            width: 40%;
+            border-radius: 7px;
+            margin: 2%;
+            border: 1px solid #e2e2e2;
+            position: relative;
+            background: white;
         }
     }
     
@@ -59,5 +64,53 @@
 .itemFeature {
     p, button {
         display: inline-block;
+    }
+    button:focus {
+        outline: none;
+    }
+    button.btnDelete {
+        position: absolute;
+        right: -5px;
+        top: -6px;
+        background: #bf5d44;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        font-size: 17px;
+        height: 20px;
+        width: 20px;
+        line-height: 1px;
+        &:hover {
+            background: #884231;
+        }
+    }
+    
+    p {
+        font-size: 15px;
+        width: 85%;
+    }
+}
+
+.backBlue {
+    background: #7ebfef;
+}
+
+button.btnChangeColor {
+    height: 22px;
+    position: absolute;
+    right: -1px;
+    bottom: -10px;
+    border-radius: 14px;
+    border: 1px solid #c1c1c1;
+    background: #ffffff;
+    color: #717171;
+    padding: 0px 11px;
+    font-size: 11px;
+    &:hover {
+       background: #c1c1c1;
+       color: white; 
+    }
+    &:focus {
+        outline: none;
     }
 }

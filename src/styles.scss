@@ -3,7 +3,4 @@
 @import "styles/general/normalize";
 @import "styles/general/fuentes";
 
-body {
-    background: #e2e2e2;
-}
-
+@import "app/app.component.scss";

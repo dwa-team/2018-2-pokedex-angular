@@ -4,17 +4,18 @@
         <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
     </div>
     
-    <div class="rightCont">
+    <div class="rightCont" [ngClass]="{ backBlue:isColorBlue }">
         <ul>
             <li class="itemFeature" *ngFor="let caract of feature_list; let i= index">
                 <p>{{ caract }}</p>
-                <button (click)="eliminarCaract(i);"> - </button>
+                <button class="btnDelete" (click)="eliminarCaract(i);"> - </button>               
             </li>
         </ul>
         <div class="center">
             <input type="text" [(ngModel)]="feature_a_guardar">
             <button (click)="agregarCarac();"> + </button>
         </div>
+        <button class="btnChangeColor" (click) = "isColorBlue = !isColorBlue;"> Change color </button> 
     </div>
 
 </section>

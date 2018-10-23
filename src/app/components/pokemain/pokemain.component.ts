@@ -12,12 +12,13 @@ export class PokemainComponent implements OnInit {
 
   public feature_list: Array<string>;
   public feature_a_guardar: string;
-
-  constructor(  
+  public isColorBlue: boolean;
   
+  constructor(  
     private _featuresService: FeaturesService
-
-  ){}
+  ){
+    this.isColorBlue = false;
+  }
 
   ngOnInit() {
     this.feature_list = this._featuresService.getFeatures();
