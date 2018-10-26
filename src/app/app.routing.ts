@@ -9,6 +9,7 @@ const appRoutes: Routes = [
     { path:'', component:HomeComponent },
     { path:'home', component:HomeComponent },
     { path:'requests', component:RequestsComponent },
+    { path:'requests/:ident', component:RequestsComponent },
     { path:'pipes', component:PipesComponent }
 ];
 

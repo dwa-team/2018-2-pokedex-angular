@@ -1,11 +1,38 @@
 <section class="sectionCont"> 
+    
 
-    <p>List of users from JSONPlaceholder</p>
-    <ul>
-        <li *ngFor="let usuario of listUsers;">
-            {{ usuario.name }}
-        </li>
-    </ul>
 
-    <button (click)="goToHome();">Go back to Home</button>
+
+    <div *ngIf = "parametroUrl">
+        <ul>
+            <li>{{ listComics[parametroUrl].id }}</li>
+            <li>{{ listComics[parametroUrl].nombre }}</li>
+            <li>{{ listComics[parametroUrl].fechaPublicacion }}</li>
+            <li>{{ listComics[parametroUrl].editorial }}</li>
+        </ul>
+        <button (click)="volverAtras()"> Go back </button>
+    </div>
+
+
+    <div *ngIf = "!parametroUrl">
+        <button (click)="goToHome();">Go back to Home</button>    
+        <p>List of users from JSONPlaceholder</p>
+        <ul>
+            <li *ngFor="let usuario of listUsers;">
+                {{ usuario.name }}
+            </li>
+        </ul>
+        <br>
+        <p>List of comics with an specific format:</p>
+        El parámetro de la url es {{ parametroUrl }}
+        <ul>
+            <li *ngFor="let comic of listComics;">
+                {{ comic.id }} - {{comic.nombre }}
+                <button (click)="verDetalle(comic.id);"> Ver detalle </button>
+                <br><br>
+            </li>
+        </ul>
+    </div>
+
+
 </section>
