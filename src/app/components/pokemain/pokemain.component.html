@@ -1,4 +1,4 @@
-<section class="bodyCont">
+<section class="sectionCont">
     
     <div class="leftCont imageAgumon">
         <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
@@ -12,9 +12,11 @@
             </li>
         </ul>
         <div class="center">
-            <input type="text" [(ngModel)]="feature_a_guardar">
-            <button (click)="agregarCarac();"> + </button>
+            <p> Add new feature: </p>
+            <input class="inputAddFeature" type="text" [(ngModel)]="feature_a_guardar">
+            <button class="btnAddFeature" (click)="agregarCarac();"> + </button>
         </div>
     </div>
 
 </section>
+

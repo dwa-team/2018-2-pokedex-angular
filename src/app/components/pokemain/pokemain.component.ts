@@ -26,8 +26,10 @@ export class PokemainComponent implements OnInit {
   }
 
   agregarCarac() {
-    this._featuresService.addFeature(this.feature_a_guardar);
-    this.feature_a_guardar = null;
+    if(this.feature_a_guardar) {
+      this._featuresService.addFeature(this.feature_a_guardar);
+      this.feature_a_guardar = null;
+    }
   }
 
   eliminarCaract(_index) {

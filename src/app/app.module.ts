@@ -11,7 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { PokemainComponent } from './components/pokemain/pokemain.component';
 import { RequestsComponent } from './pages/requests/requests.component';
 import { PipesComponent } from './pages/pipes/pipes.component';
-
+import { ListComponent } from './pages/list/list.component';
+ 
 import { MultiplicarPorPipe } from './pipes/multiplicarpor.pipe';
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MultiplicarPorPipe } from './pipes/multiplicarpor.pipe';
     PokemainComponent,
     RequestsComponent,
     PipesComponent,
-    MultiplicarPorPipe
+    MultiplicarPorPipe,
+    ListComponent
   ],
   imports: [
     BrowserModule,
