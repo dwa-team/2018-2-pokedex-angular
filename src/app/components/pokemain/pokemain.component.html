@@ -1,12 +1,12 @@
 <section class="sectionCont">
     
     <div class="leftCont imageAgumon">
-        <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
+        <img @fade class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
     </div>
     
     <div class="rightCont">
         <ul>
-            <li class="itemFeature" *ngFor="let caract of feature_list; let i= index">
+            <li @fade @explode class="itemFeature" *ngFor="let caract of feature_list; let i= index">
                 <p>{{ caract }}</p>
                 <button class="btnDelete" (click)="eliminarCaract(i);"> - </button>               
             </li>

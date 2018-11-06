@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FeaturesService } from '../../services/features.service';
-
+import { fade, explode} from './../../animations/animations';
 
 @Component({
   selector: 'app-pokemain',
   templateUrl: './pokemain.component.html',
   styleUrls: ['./pokemain.component.scss'],
-  providers: [ FeaturesService ] 
+  providers: [ FeaturesService ],
+  animations: [ fade, explode ]
 })
 
 export class PokemainComponent implements OnInit {
@@ -16,7 +17,6 @@ export class PokemainComponent implements OnInit {
   
   constructor(  
     private _featuresService: FeaturesService,
-    
   ){
   
   }
